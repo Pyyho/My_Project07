@@ -7,6 +7,7 @@
 <title>Контакты</title>
 <!-- Подключение фавиконки -->
 <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../src/static/styles.css">
 </head>
 <body>
     <header>
@@ -32,6 +33,35 @@
             <h2>Наши соц. сети</h2>
             <p>Наши контакты: ...</p>
         </section>
+
+        <h1>Форма обратной связи</h1>
+        <form>
+            <label for = "username">Ваше имя:</label>
+            <input type = "text" id = "name" name = "username">          
+            
+            <label for = "phone">Ваш номер телефона:</label>
+            <input type = "text" id = "phone" name = "phone">
+
+            <label for = "email">Ваш email:</label>
+            <input for = "email" id = "email" name = "email">
+
+            <label for = "cource">Ваш Курс:</label>
+            <select for = "cource" name = "cource">
+                <option value="ту">не выбран</option>
+                <option value="1">1 курс</option>
+                <option value="2">2 курс</option>
+                <option value="3">3 курс</option>
+                <option value="4">4 курс</option>
+                <option value="other"></option>
+
+            </select>
+
+            <label for = "massege">Ваше бращение:</label>
+            <textarea id = "massege" name = "massege" rows = "6"></textarea>
+
+            <button type = "submit" id = "submit" name = "submit">Отправить</button>
+            <button type = "reset" id = "reset" name = "reset">очистить</button>
+        </form>
     </main>
 
 
