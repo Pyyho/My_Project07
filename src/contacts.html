@@ -37,27 +37,27 @@
         <h1>Форма обратной связи</h1>
         <form id = "ContactForm">
             <label for = "username">Ваше имя:</label>
-            <input type = "text" id = "name" name = "username" required>          
+            <input type = "text" id = "username" name = "username" required>          
             
             <label for = "phone">Ваш номер телефона:</label>
             <input type = "text" id = "phone" name = "phone" required>
 
             <label for = "email">Ваш email:</label>
-            <input for = "email" id = "email" name = "email" required>
+            <input type = "text" name = "email" id = "email" required>
 
             <label for = "cource">Ваш Курс:</label>
-            <select for = "cource" name = "cource">
-                <option value="ту">не выбран</option>
+            <select name = "cource" id = "cource">
+                <option value="no">не выбран</option>
                 <option value="1">1 курс</option>
                 <option value="2">2 курс</option>
                 <option value="3">3 курс</option>
                 <option value="4">4 курс</option>
-                <option value="other"></option>
+                <option value="other">Другой</option>
 
             </select>
 
-            <label for = "massege">Ваше обращение:</label>
-            <textarea id = "massege" name = "massege" rows = "6" required></textarea>
+            <label for = "message">Ваше обращение:</label>
+            <textarea name = "message" id = "message" rows = "6" required></textarea>
 
             <button type = "submit" id = "submit" name = "submit">Отправить</button>
             <button type = "reset" id = "reset" name = "reset">очистить</button>
