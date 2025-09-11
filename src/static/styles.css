@@ -46,3 +46,11 @@ button:hover {
     background-color: blueviolet;
     color: wheat;
 }
+
+#ContactForm {
+    border: 3px solid blue;
+    border-radius: 10px;
+    background-color: aquamarine;
+    padding: 10px;
+    max-width: 250px;
+}
