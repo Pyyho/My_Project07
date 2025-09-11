@@ -1,0 +1,48 @@
+/* Сбрасываем старт стили */
+*{
+    margin: 0; /* внешние отступы*/
+    padding: 0; /* внутнренние отступы */
+    box-sizing: border-box;
+}
+
+input, button {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+
+}
+
+/* Собираем свои стили */
+label {
+    display: block; /* lable вертикально */
+    font-weight: bold; /* ПОЛУЖИРНЫЙ*/
+    margin-bottom: 10px; /* отступ 10 пикселей снизу*/
+    margin-top: 10px; /* отступ 10 пикселей сверху*/
+
+}
+
+input {
+    border: 3px solid pink;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+input:focus {
+    background-color:  chartreuse;
+}
+
+button {
+    padding: 5px;
+    border: 3px solid blue;
+    border-radius: 10px;
+    background-color: aqua;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: blueviolet;
+    color: wheat;
+}
