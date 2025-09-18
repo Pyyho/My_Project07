@@ -61,3 +61,123 @@ button:hover {
     background-color: darksalmon;
     color: red;
 }
+
+:root{
+/* Палитра */
+    --color-bg:#fff; --color-fg:#0b0b0b; --color-muted:#666;
+    --color-primary:#0a84ff; --color-danger:#b00020;
+    /* Типографика и размеры */
+    --font-body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    --space-1:4px; --space-2:8px; --space-3:16px; --space-4:24px; --space-
+    5:40px;
+    /* Скругления и тени */
+    --radius:12px;
+    --shadow:0 1px 2px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.08);
+}
+/* Тёмная тема: переопределяем только значения токенов */
+body.theme-dark{
+    --color-bg:#c1d1ff; --color-fg:#000000; --color-muted:#aaa;
+    --color-primary:#6aa2ff;
+}
+
+
+*{ 
+    box-sizing:border-box; 
+}
+
+
+html,body{
+     margin:0; padding:0; 
+}
+body{
+    background:var(--color-bg);
+    color:var(--color-fg);
+    font-family:var(--font-body);
+    line-height:1.5;
+}
+
+a:link{
+
+} 
+a:visited{
+
+} 
+a:hover{
+
+}
+a:active{
+
+}
+
+:where(a,button,input,select,textarea):focus-visible{
+    outline:2px solid var(--color-primary);
+    outline-offset:2px;
+}
+.site-nav__link{ 
+    color:var(--color-fg); 
+}
+
+:disabled,[aria-disabled="true"]{
+    opacity:.6;cursor:not-allowed;
+}
+
+html{ 
+    scroll-behavior:smooth; 
+} 
+
+:target{ 
+    outline:2px dashed var(--color-primary); outline-offset:4px; 
+} 
+
+.container{ 
+    width:min(100% - 2*var(--space-4), 1120px); margin-inline:auto; 
+}
+
+.section{ 
+    padding-block:var(--space-5); 
+}
+
+.section__title{ 
+    margin:0 0 var(--space-3); 
+}
+
+*{ 
+    box-sizing:border-box; 
+} /* Проще считать ширины/высоты */
+html,body{ 
+    margin:0; padding:0; 
+}
+
+img,video{ 
+    max-width:100%; height:auto; display:block; 
+}
+
+button,input,select,textarea{ 
+    font:inherit; color:inherit; 
+}
+
+.card__img{
+width:100%; height:220px; /* фиксируем высоту карточки */
+object-fit:cover; object-position:center; /* аккуратное кадрирование */
+border-radius:var(--radius); display:block;
+}
+
+.hero{
+    background-image:
+    linear-gradient(to top, rgba(0, 17, 255, 0.55), rgba(255, 0, 212, 0.15)),
+    image-set(url("../img/card-640.jpg") 1x, url("../img/card-640.jpg") 2x );
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.media{
+    aspect-ratio: 16/9; /* удерживаем пропорцию блока */
+    width: min(100%, 960px); /* не шире 960px, но адаптивен */
+    margin-inline: auto; /* центрируем блок */
+}
+.media iframe,.media video{
+width:100%; height:100%; /* медиа занимает всю площадь контейнера
+*/
+border:0; border-radius:var(--radius);
+}
